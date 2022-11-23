@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="bxa-vD-ZiF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="bxa-vD-ZiF" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bxa-vD-ZiF" id="XPK-Ke-tYL">
@@ -33,7 +33,6 @@
                     <navigationItem key="navigationItem" title="Todoey" id="taY-Z3-dbN">
                         <barButtonItem key="backBarButtonItem" title=" " id="3OG-0V-Xdh"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="n3z-iM-Wtt">
-                            <color key="tintColor" systemColor="systemBackgroundColor"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="R9r-eN-KZu" id="AzK-lO-8j9"/>
                             </connections>
@@ -64,7 +63,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" id="RBK-o6-oyJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="RBK-o6-oyJ" customClass="SwipeTableViewCell" customModule="SwipeCellKit">
                                 <rect key="frame" x="0.0" y="94" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RBK-o6-oyJ" id="KaI-AB-IA0">
@@ -80,12 +79,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="ejP-WF-As8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="F4H-xR-2BK">
-                            <color key="tintColor" systemColor="systemBackgroundColor"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="7G1-mb-kXS" id="0IH-25-s04"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="eeT-Sq-qZw" id="3sJ-Qc-AH8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVW-2V-UKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,8 +97,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6h2-qa-gzE" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c2i-Er-RwF">
-                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="c2i-Er-RwF">
+                        <rect key="frame" x="0.0" y="47" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <color key="tintColor" systemColor="systemBackgroundColor"/>

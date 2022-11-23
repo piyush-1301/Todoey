@@ -10,5 +10,6 @@ import RealmSwift
 
 class Category: Object{
     @Persisted var name: String = ""
+    @Persisted var color: String = "#FFFFFF"
     @Persisted var items: List<Item>
 }
